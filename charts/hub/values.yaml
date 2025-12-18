@@ -179,6 +179,14 @@ kerberoshub:
   #  extraEnv:
   #    - name: HTTP_PROXY
   #      value: "custom_value"
+  serviceAccount:
+    # serviceAccount.create Enable creation of ServiceAccount
+    create: true
+    # If create is not set to true, a name is used in helm chart
+    name: ""
+    # additional ServiceAccount annotations
+    annotations: {}
+    labels: {}
   api:
     repository: uugai/hub-api
     pullPolicy: IfNotPresent
